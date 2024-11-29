@@ -1,6 +1,6 @@
 # Symbolic Artificial Intelligence Assignments - Autumn 2023
 
-This repository contains a collection of assignments completed as part of the *Symbolic Artificial Intelligence* course at Vilnius University during the Autumn semester of 2023.
+This repository contains a collection of assignments completed as part of the *Artificial Intelligence: classical principles* course at Vilnius University during the Autumn semester of 2023.
 
 ## What is Symbolic AI?
 
