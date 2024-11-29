@@ -1,0 +1,6 @@
+PART 1. Data
+1) Board: 4x4.
+2) Initial position: X=1,Y=1. L=1
+
+PART 3. Results
+1) Path doesn't exist. Trials=17784.

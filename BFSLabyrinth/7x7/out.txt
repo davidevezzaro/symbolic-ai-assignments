@@ -1,0 +1,124 @@
+PART 1. Data
+ 1.1 Labyrinth
+
+   Y,V ^
+     7 |  1	 1	 1	 1	 1	 0	 1	
+     6 |  0	 0	 0	 0	 0	 0	 0	
+     5 |  1	 1	 1	 1	 0	 1	 1	
+     4 |  1	 0	 0	 0	 2	 1	 1	
+     3 |  1	 0	 1	 0	 0	 0	 1	
+     2 |  1	 0	 0	 0	 1	 0	 1	
+     1 |  1	 1	 1	 1	 1	 1	 1	
+        --------------------------> X, U
+	      1	 2	 3	 4	 5	 6	 7	
+
+ 1.2 Initial position X=5, Y=4, NEWN=1.
+
+PART 2. Trace
+
+WAVE 0, label L="2". Initial position X=5, Y=4, NEWN=1.
+
+WAVE 1, label L="3"
+	Close CLOSE=1, X=5, Y=4.
+		 R1. X=4, Y=4. Free. NEWN=2.
+		 R2. X=5, Y=3. Free. NEWN=3.
+		 R3. X=6, Y=4. Wall.
+		 R4. X=5, Y=5. Free. NEWN=4.
+
+WAVE 2, label L="4"
+	Close CLOSE=2, X=4, Y=4.
+		 R1. X=3, Y=4. Free. NEWN=5.
+		 R2. X=4, Y=3. Free. NEWN=6.
+		 R3. X=5, Y=4. CLOSED or OPEN.
+		 R4. X=4, Y=5. Wall.
+
+	Close CLOSE=3, X=5, Y=3.
+		 R1. X=4, Y=3. CLOSED or OPEN.
+		 R2. X=5, Y=2. Wall.
+		 R3. X=6, Y=3. Free. NEWN=7.
+		 R4. X=5, Y=4. CLOSED or OPEN.
+
+	Close CLOSE=4, X=5, Y=5.
+		 R1. X=4, Y=5. Wall.
+		 R2. X=5, Y=4. CLOSED or OPEN.
+		 R3. X=6, Y=5. Wall.
+		 R4. X=5, Y=6. Free. NEWN=8.
+
+WAVE 3, label L="5"
+	Close CLOSE=5, X=3, Y=4.
+		 R1. X=2, Y=4. Free. NEWN=9.
+		 R2. X=3, Y=3. Wall.
+		 R3. X=4, Y=4. CLOSED or OPEN.
+		 R4. X=3, Y=5. Wall.
+
+	Close CLOSE=6, X=4, Y=3.
+		 R1. X=3, Y=3. Wall.
+		 R2. X=4, Y=2. Free. NEWN=10.
+		 R3. X=5, Y=3. CLOSED or OPEN.
+		 R4. X=4, Y=4. CLOSED or OPEN.
+
+	Close CLOSE=7, X=6, Y=3.
+		 R1. X=5, Y=3. CLOSED or OPEN.
+		 R2. X=6, Y=2. Free. NEWN=11.
+		 R3. X=7, Y=3. Wall.
+		 R4. X=6, Y=4. Wall.
+
+	Close CLOSE=8, X=5, Y=6.
+		 R1. X=4, Y=6. Free. NEWN=12.
+		 R2. X=5, Y=5. CLOSED or OPEN.
+		 R3. X=6, Y=6. Free. NEWN=13.
+		 R4. X=5, Y=7. Wall.
+
+WAVE 4, label L="6"
+	Close CLOSE=9, X=2, Y=4.
+		 R1. X=1, Y=4. Wall.
+		 R2. X=2, Y=3. Free. NEWN=14.
+		 R3. X=3, Y=4. CLOSED or OPEN.
+		 R4. X=2, Y=5. Wall.
+
+	Close CLOSE=10, X=4, Y=2.
+		 R1. X=3, Y=2. Free. NEWN=15.
+		 R2. X=4, Y=1. Wall.
+		 R3. X=5, Y=2. Wall.
+		 R4. X=4, Y=3. CLOSED or OPEN.
+
+	Close CLOSE=11, X=6, Y=2.
+		 R1. X=5, Y=2. Wall.
+		 R2. X=6, Y=1. Wall.
+		 R3. X=7, Y=2. Wall.
+		 R4. X=6, Y=3. CLOSED or OPEN.
+
+	Close CLOSE=12, X=4, Y=6.
+		 R1. X=3, Y=6. Free. NEWN=16.
+		 R2. X=4, Y=5. Wall.
+		 R3. X=5, Y=6. CLOSED or OPEN.
+		 R4. X=4, Y=7. Wall.
+
+	Close CLOSE=13, X=6, Y=6.
+		 R1. X=5, Y=6. CLOSED or OPEN.
+		 R2. X=6, Y=5. Wall.
+		 R3. X=7, Y=6. Free. NEWN=17. Terminal.
+
+PART 3. Results
+
+ 3.1 Path is found.
+
+ 3.2 Path graphically:
+
+LABCOPY
+   Y,V ^
+     7 |  1	 1	 1	 1	 1	 0	 1	
+     6 |  0	 0	 6	 5	 4	 5	 6	
+     5 |  1	 1	 1	 1	 3	 1	 1	
+     4 |  1	 5	 4	 3	 2	 1	 1	
+     3 |  1	 6	 1	 4	 3	 4	 1	
+     2 |  1	 0	 6	 5	 1	 5	 1	
+     1 |  1	 1	 1	 1	 1	 1	 1	
+        --------------------------> X, U
+	      1	 2	 3	 4	 5	 6	 7	
+
+ 3.3. Rules: R4, R4, R3, R3.
+
+ 3.4. Nodes: [X=5,Y=4], [X=5,Y=5], [X=5,Y=6], [X=6,Y=6], [X=7,Y=6].
+
+ 3.4. Number of productions applied: 51

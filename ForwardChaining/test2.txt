@@ -1,0 +1,15 @@
+Davide Vezzaro. Universita degli Studi di Padova, Computer Science.
+Test 2. Initial fact in the right hand side
+1) Rules
+Z G				\\ R1: G -> Z. Comments.
+G A				\\ R2: A -> G
+B A				\\ R3: A -> B
+C B				\\ R4: B -> C
+D C				\\ R5: C -> D
+Z D				\\ R6: D -> Z
+
+2) Facts
+A
+
+3) Goal
+Z
